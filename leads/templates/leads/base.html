@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<style type="text/css">
+		.lead{
+			padding :10px 6px;
+			margin-top: 10px;
+			background-color: #f6f6f6;
+			width:100%;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="max-w-7xl">
+			
+		{% include 'leads/navbar.html' %}
+
+			{% block content %}
+
+			{% endblock content %}
+
+	</div>
+{% include 'leads/scripts.html' %}
+	
+</body>
+</html>
